@@ -1,0 +1,76 @@
+/*  Univerzális szelektor: Minden elemre rakunk stílust. */
+
+* {
+   /* border: 1px solid blue; */
+}
+
+/* Elemszelektor (egyszerű): Elemnevek alapján rak stílust
+    Csoportba rendezhető. Ugyanaz a stílus több elemen, vesszővel
+    soroljuk fel őket. */ 
+
+    p, div {
+        /*font size: 2em; em=16px */
+        font-size: 2vw; /* vw = viewwidth / 100 */
+    }
+
+    /* Osztály szelektor(class): több elemre pakolható. */
+
+    .osztaly {
+        color: blue
+    }
+
+    .osztaly2 {
+        background-color: #12AC3D;
+    }
+
+    /*id-szelektor: CSAK EGY ELEMRE, és EGY ELEMRE CSAK EGYET */
+
+    #elem {
+        text-indent: 50px;
+    }
+
+    #elem2 {
+        color: tomato;
+    }
+
+    /* Descendant (leszármazott szelektor) */
+
+    /* div p {
+        text-decoration: underline;
+    } */
+
+    /* Child (gyermek szelektor) */
+
+     /*div > p {
+        text-decoration: underline;
+    } */
+
+    /* Adjacent sibling (szomszédos szelektor) */
+
+    h1 ~ p {
+        text-decoration: underline;
+    }
+
+    /* General sibling (általános testvér) szelektor */
+
+    h1 ~ p {
+        text-decoration: underline;
+    }
+
+    /* pseudo-class (pszeudo-osztály) szelektor: milyen állapotbam van az elem 
+    a:link, a:hover, a:active */
+
+    a.kiemel:hover {
+        background-color: purple;
+    }
+
+    a.kiemel:active {
+        color: white;
+    }
+    /* :first-child pszeudo-osztály */
+    p:first-child {
+        text-decoration: line-through;
+        font-size: 2em;
+    }
+
+    /* ::first-line pszeudo-elem */
